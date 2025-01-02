@@ -1,0 +1,13 @@
+SCC = This is a Source Code Control file
+
+[rmu3config.sln]
+SCC_Aux_Path = "\\revctrl\rcs\Program Files\Microsoft Visual Studio\Common\VSS"
+SCC_Project_Name = "$/Cathodic/RMU3/rmu3config", MYCIAAAA
+
+[rmu3config.vcproj]
+SCC_Aux_Path = "\\revctrl\rcs\Program Files\Microsoft Visual Studio\Common\VSS"
+SCC_Project_Name = "$/Cathodic/UDL1/udl1config", TNBMAAAA
+
+[udl1config.sln]
+SCC_Aux_Path = "\\revctrl\rcs\Program Files\Microsoft Visual Studio\Common\VSS"
+SCC_Project_Name = "$/Cathodic/UDL1/udl1config", TNBMAAAA

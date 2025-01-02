@@ -1,0 +1,717 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\udl1config.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About udl1config"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "uDL1Config",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010-2018",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_uDL1CONFIG_DIALOG DIALOGEX 0, 0, 678, 342
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "uDL1 Configuration Editor"
+MENU IDR_MENU_MAIN
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Configuration",IDC_STATIC,7,0,663,172
+    GROUPBOX        "Periodic Sampling Timing",IDC_STATIC,17,10,186,43
+    EDITTEXT        IDC_EDIT_SAMPLECYCLEPERIODHOURS,27,21,16,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "h",IDC_STATIC,45,24,8,8
+    EDITTEXT        IDC_EDIT_SAMPLECYCLEPERIODMINS,51,21,16,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "m",IDC_STATIC,69,24,8,8
+    EDITTEXT        IDC_EDIT_SAMPLECYCLEPERIODSECS,76,21,16,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "s",IDC_STATIC,94,24,8,8
+    LTEXT           "Sampling Interval (1s - 12hrs)",IDC_STATIC,102,24,95,8
+    EDITTEXT        IDC_EDIT_SAMPLECYCLEDELAYMS,27,36,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "1s DC Sampling Delay (100 - 600 ms)",IDC_STATIC_1SDCDELAY,59,39,132,8
+    GROUPBOX        "Delayed Start Timing (v1.16+)",IDC_STATIC,17,54,186,28
+    EDITTEXT        IDC_EDIT_ACQUISITIONDELAYMINS,27,64,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Acquistion Start Delay (0-40320 mins)",IDC_STATIC_ACQUISITIONDELAY,60,67,132,8
+    GROUPBOX        "Interruption Tracking (Advanced G2 Unit Only)",IDC_STATIC_INTRACK1,209,10,279,72
+    CONTROL         "Enable",IDC_CHECK_INTTRACKINGENABLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,215,23,37,10
+    CONTROL         "On-first Cycle",IDC_CHECK_INTTRACKINGONFIRST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,260,23,60,10
+    EDITTEXT        IDC_EDIT_INTOFFTIME,215,34,40,14,ES_AUTOHSCROLL
+    LTEXT           "Off Time (ms)",IDC_STATIC_INTRACK2,259,37,44,8
+    EDITTEXT        IDC_EDIT_INTONTIME,215,49,40,14,ES_AUTOHSCROLL
+    LTEXT           "On Time (ms)",IDC_STATIC_INTRACK3,259,53,43,8
+    EDITTEXT        IDC_EDIT_INTCYCLETIME,215,64,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Cycle Time (ms)",IDC_STATIC_INTRACK4,259,68,51,8
+    EDITTEXT        IDC_EDIT_INTONTOOFFOFFSET,328,34,40,14,ES_AUTOHSCROLL
+    LTEXT           "On->Off Offset (ms)",IDC_STATIC_INTRACK5,371,37,68,8
+    EDITTEXT        IDC_EDIT_INTOFFTOONOFFSET,328,49,40,14,ES_AUTOHSCROLL
+    LTEXT           "Off->On Offset (ms)",IDC_STATIC_INTRACK6,371,53,68,8
+    EDITTEXT        IDC_EDIT_INTUTCOFFSET,328,64,40,14,ES_AUTOHSCROLL
+    LTEXT           "UTC Offset (+/-5000ms)",IDC_STATIC_INTRACK7,371,68,80,8
+    GROUPBOX        "DC Sampling",IDC_STATIC,17,82,128,57
+    CONTROL         "Enabled",IDC_CHECK_DCENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,92,41,10
+    CONTROL         "V",IDC_RADIO_DCV,"Button",BS_AUTORADIOBUTTON | WS_GROUP,69,92,20,10
+    CONTROL         "A   Units",IDC_RADIO_DCA,"Button",BS_AUTORADIOBUTTON,89,92,44,10
+    EDITTEXT        IDC_EDIT_SCALEFACTORDC,24,105,40,14,ES_AUTOHSCROLL
+    LTEXT           "Scale Factor",IDC_STATIC,67,107,63,8
+    EDITTEXT        IDC_EDIT_OFFSETDC,24,121,40,14,ES_AUTOHSCROLL
+    LTEXT           "Offset",IDC_STATIC,67,124,22,8
+    PUSHBUTTON      "Shunt Calc",IDC_BUTTON_SHUNTCALCDC,95,121,44,14
+    GROUPBOX        "AC Sampling",IDC_STATIC,147,82,128,57
+    CONTROL         "Enabled",IDC_CHECK_ACENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,153,92,41,10
+    CONTROL         "V",IDC_RADIO_ACV,"Button",BS_AUTORADIOBUTTON | WS_GROUP,197,92,20,10
+    CONTROL         "A   Units",IDC_RADIO_ACA,"Button",BS_AUTORADIOBUTTON,217,92,43,10
+    EDITTEXT        IDC_EDIT_SCALEFACTORAC,153,105,40,14,ES_AUTOHSCROLL
+    LTEXT           "Scale Factor",IDC_STATIC,196,107,69,8
+    EDITTEXT        IDC_EDIT_OFFSETAC,153,121,40,14,ES_AUTOHSCROLL
+    LTEXT           "Offset",IDC_STATIC,196,124,22,8
+    PUSHBUTTON      "Shunt Calc",IDC_BUTTON_SHUNTCALCAC,223,121,44,14
+    GROUPBOX        "Input Range",IDC_STATIC,277,82,92,57
+    CONTROL         "Low(+/-150mVpeak)",IDC_RADIO_RNGLOW,"Button",BS_AUTORADIOBUTTON | WS_GROUP,281,94,84,10
+    CONTROL         "Med(+/-20Vpeak)",IDC_RADIO_RNGMED,"Button",BS_AUTORADIOBUTTON,281,106,82,10
+    CONTROL         "High (+/-150Vpeak)",IDC_RADIO_RNGHIGH,"Button",BS_AUTORADIOBUTTON,281,118,84,10
+    GROUPBOX        "Temperature Sampling",IDC_STATIC,371,82,118,27
+    CONTROL         "Enabled",IDC_CHECK_TEMPENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,378,94,41,10
+    CONTROL         "°C",IDC_RADIO_TEMPC,"Button",BS_AUTORADIOBUTTON | WS_GROUP,424,94,24,10
+    CONTROL         "°F",IDC_RADIO_TEMPF,"Button",BS_AUTORADIOBUTTON,455,94,23,10
+    GROUPBOX        "Time Display",IDC_STATIC,371,112,118,27
+    CONTROL         "Enabled",IDC_CHECK_TIMEENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,378,124,41,10
+    CONTROL         "UTC",IDC_RADIO_TDUTC,"Button",BS_AUTORADIOBUTTON | WS_GROUP,424,124,29,10
+    CONTROL         "Local",IDC_RADIO_TDLOCAL,"Button",BS_AUTORADIOBUTTON,455,124,32,10
+    GROUPBOX        "DC Wave Capture (Advanced Unit Only)",IDC_STATIC_ADVANCED4,494,10,168,71
+    CONTROL         "Enable",IDC_CHECK_DCWAVECAPEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,499,20,37,10
+    CONTROL         "Continuous Capture",IDC_CHECK_DCWAVECAPCONT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,567,20,86,10
+    EDITTEXT        IDC_EDIT_DCWAVEREPINT,499,31,40,14,ES_AUTOHSCROLL
+    LTEXT           "Repetition Interval (1min - 720min)",IDC_STATIC_ADVANCED1,541,34,116,8
+    EDITTEXT        IDC_EDIT_DCWAVEDUR,499,47,40,14,ES_AUTOHSCROLL
+    LTEXT           "Duration (s)",IDC_STATIC_ADVANCED2,542,50,40,8
+    EDITTEXT        IDC_EDIT_DCWAVESAMPLERATE,585,47,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Rate (ms)",IDC_STATIC_ADVANCED3,626,50,33,8
+    EDITTEXT        IDC_EDIT_FASTOFFSETMS,499,62,40,14,ES_AUTOHSCROLL
+    CONTROL         "100ms Sync Offset (0-99ms)",IDC_CHECK_SYNCOFFSETENABLE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,543,64,107,10
+    GROUPBOX        "GPS (Advanced Unit Only)",IDC_STATIC_ADVANCED5,493,82,168,86
+    CONTROL         "Require GPS Time Lock To Start Sampling",IDC_CHECK_DCWAVEGPSSYNC,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,499,92,150,10
+    CONTROL         "Disable Long Term GPS Time Synchronization",IDC_CHECK_NOEXTENDEDGPSSYNC,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,499,103,159,10
+    CONTROL         "Enable Minimum EHPE Validation For Position",IDC_CHECK_MINEHPEENABLE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,499,138,159,10
+    EDITTEXT        IDC_EDIT_EHPEMIN,499,150,24,14,ES_AUTOHSCROLL
+    LTEXT           "Min EHPE (m)",IDC_STATIC_ADVANCED6,525,152,44,8
+    EDITTEXT        IDC_EDIT_EHPEMINTIMEOUT,571,150,22,14,ES_AUTOHSCROLL
+    LTEXT           "EHPE Timeout (min)",IDC_STATIC_ADVANCED7,595,152,63,8
+    GROUPBOX        "Notes",IDC_STATIC,17,138,472,30
+    EDITTEXT        IDC_EDIT_NOTES,25,150,375,14,ES_AUTOHSCROLL
+    GROUPBOX        "Data Memory",IDC_STATIC,7,175,301,161
+    CONTROL         "",IDC_PROGRESS_MEMUSE,"msctls_progress32",PBS_SMOOTH | WS_BORDER,16,186,155,14
+    LTEXT           "Mem Used",IDC_STATIC,73,202,34,8
+    PUSHBUTTON      "Clear Memory",IDC_BUTTON_CLEARDATA,174,186,127,14
+    GROUPBOX        "Extraction Time Format",IDC_STATIC,16,210,155,35
+    CONTROL         "UTC",IDC_RADIO_UTC,"Button",BS_AUTORADIOBUTTON | WS_GROUP,19,223,38,10
+    CONTROL         "Local",IDC_RADIO_LOCAL,"Button",BS_AUTORADIOBUTTON,19,231,149,10
+    PUSHBUTTON      "Extract To Master Data File",IDC_BUTTON_EXTRACTDATA,174,216,127,14
+    PUSHBUTTON      "Master Data File Split Utility",IDC_BUTTON_SPLITDATAFILE,174,231,127,14
+    GROUPBOX        "Data Preview Charts",IDC_STATIC,16,247,284,83
+    EDITTEXT        IDC_EDIT_CHARTTITLE,21,258,232,14,ES_AUTOHSCROLL
+    LTEXT           "Chart Title",IDC_STATIC,257,261,34,8
+    PUSHBUTTON      "DC",IDC_BUTTON_CHARTDC,21,274,55,14
+    PUSHBUTTON      "DC Wave",IDC_BUTTON_CHARTDCWAVE,80,274,55,14
+    PUSHBUTTON      "AC",IDC_BUTTON_CHARTAC,139,274,55,14
+    PUSHBUTTON      "Temperature",IDC_BUTTON_CHARTTEMP,199,274,50,14
+    PUSHBUTTON      "All",IDC_BUTTON_CHARTALL,253,274,41,14
+    PUSHBUTTON      "DC Int.",IDC_BUTTON_CHARTINTDC,21,293,55,14
+    PUSHBUTTON      "AC Int.",IDC_BUTTON_CHARTINTAC,139,293,55,14
+    PUSHBUTTON      "Read Master Data File",IDC_BUTTON_READDATAFILE,21,311,272,14
+    GROUPBOX        "uDL1 Communications and Status",IDC_STATIC,312,175,358,161
+    PUSHBUTTON      "Set uDL1 Clock",IDC_BUTTON_SETRTC,317,186,79,14
+    PUSHBUTTON      "Read Faults",IDC_BUTTON_READFAULTS,317,203,79,14
+    PUSHBUTTON      "Detailed Status",IDC_BUTTON_COMMSTATUS,317,220,79,14
+    PUSHBUTTON      "Reboot uDL1",IDC_BUTTON_REBOOT,317,314,80,14
+    PUSHBUTTON      "Set Factory Overrides",IDC_BUTTON_SETFACTORY,402,186,80,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Calibrate",IDC_BUTTON_CALIBRATE,402,203,80,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Set Serial",IDC_BUTTON_SETSERIAL,402,220,80,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Analog Test",IDC_BUTTON_ANALOGTEST,402,239,80,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Analog Temp Test",IDC_BUTTON_ANALOGTEMPTEST,402,255,80,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Dlg Test",IDC_BUTTON_DLGTEST,402,271,80,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_RICHEDIT2_LINKSTATUS,"RichEdit20A",ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_TABSTOP,489,186,124,14
+    LTEXT           "Link Status",IDC_STATIC,617,190,44,8
+    EDITTEXT        IDC_EDIT_FACTORYOVERRIDES,489,202,124,34,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "Factory Options",IDC_STATIC,617,202,37,21
+    EDITTEXT        IDC_EDIT_FIRMVER,489,239,51,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Firmware",IDC_STATIC,543,242,39,8
+    EDITTEXT        IDC_EDIT_ESN,584,239,51,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Serial#",IDC_STATIC,638,242,24,8
+    PUSHBUTTON      "Defaults",IDC_BUTTON_DEFAULTS,489,258,174,14
+    PUSHBUTTON      "Read Config From File",IDC_BUTTON_READFILE,489,279,79,14
+    PUSHBUTTON      "Write Config To File",IDC_BUTTON_WRITEFILE,583,279,80,14
+    PUSHBUTTON      "Read Config From uDL1",IDC_BUTTON_READRMU,489,295,174,14
+    PUSHBUTTON      "Write Config To uDL1",IDC_BUTTON_WRITERMU,489,314,174,14
+    CONTROL         "",IDC_RICHEDIT_CONFIGSTATUS,"RichEdit20A",ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,321,244,24,11
+    LTEXT           "Link Port",IDC_STATIC,346,247,9,8,NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO_PORTSEL,321,257,17,14,CBS_DROPDOWNLIST | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OK",IDOK,321,273,7,6,NOT WS_VISIBLE
+    LTEXT           "Config Status",IDC_STATIC,340,258,11,8,NOT WS_VISIBLE
+    PUSHBUTTON      "32kHz Test",IDC_BUTTON_32KHZTEST,402,287,80,14,NOT WS_VISIBLE
+    PUSHBUTTON      "DF Memory Extract",IDC_BUTTON_BINARYEXTRACT,402,314,80,14,NOT WS_VISIBLE
+    PUSHBUTTON      "AcqTime",IDC_BUTTON_MEMTIME,438,17,30,12,NOT WS_VISIBLE
+    DEFPUSHBUTTON   "Default Button",IDC_BUTTON_DONOTHING,331,274,8,6,NOT WS_VISIBLE
+    PUSHBUTTON      "Extract To SDL and Master Data File",IDC_BUTTON_EXTRACTSDLDATA,174,202,127,14
+    PUSHBUTTON      "SDL Location Notes",IDC_BUTTON_SDLLOCATIONNOTES,402,150,80,14
+END
+
+IDD_DIALOG_INTERRUPTERSETTINGS DIALOGEX 0, 0, 187, 70
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Interrupter Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,24,50,14
+    LTEXT           "Cycle Time (ms):",IDC_STATIC,16,10,54,8
+    LTEXT           "Off Time (ms):",IDC_STATIC,23,27,47,8
+    LTEXT           "Duration (minutes):",IDC_STATIC,7,44,63,8
+    EDITTEXT        IDC_EDIT_CYCLETIME,77,7,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_OFFTIME,77,24,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DURATION,77,41,40,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_SHUNTCALC DIALOGEX 0, 0, 161, 73
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Current Shunt Calc"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Set Parameters",IDOK,7,52,62,14
+    PUSHBUTTON      "Cancel",IDCANCEL,104,52,50,14
+    LTEXT           "Shunt full scale amps:",IDC_STATIC,17,10,74,8
+    LTEXT           "Shunt full scale millivolts:",IDC_STATIC,7,31,84,8
+    EDITTEXT        IDC_EDIT_AMPS,93,7,61,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_MILLIVOLTS,93,28,61,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_4T020MA DIALOGEX 0, 0, 182, 87
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "4-20mA Transducer Offset and Scaling Calc"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Set Parameters",IDOK,7,66,62,14
+    PUSHBUTTON      "Cancel",IDCANCEL,125,66,50,14
+    LTEXT           "Rext (Ohms):",IDC_STATIC,41,10,44,8
+    LTEXT           "4mA transducer value:",IDC_STATIC,11,28,74,8
+    LTEXT           "20mA transducer value:",IDC_STATIC,7,46,78,8
+    EDITTEXT        IDC_EDIT_REXT,95,7,80,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_4MAVALUE,95,25,80,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_20MAVALUE,95,43,80,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_RELAYSELECT DIALOGEX 0, 0, 206, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pre-defined Relay Selection"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,149,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,149,24,50,14
+    CONTROL         "Solid State Relay (Normally Open)",IDC_RADIO_SOLIDSTATERELAY,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,7,7,124,10
+    CONTROL         "Mercury Relay (Normally Closed)",IDC_RADIO_MERCURYRELAY,
+                    "Button",BS_AUTORADIOBUTTON,7,17,120,10
+END
+
+IDD_DIALOG_FACTORYOVERRIDES DIALOGEX 0, 0, 186, 53
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Factory Overrides"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    CONTROL         "GPS Enabled",IDC_CHECK_GPS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,56,10
+    CONTROL         "Large Memory Enabled",IDC_CHECK_LARGEMEM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,17,89,10
+    CONTROL         "Prototype",IDC_CHECK_PROTOTYPE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,36,48,10
+END
+
+IDD_DIALOG_FAULTS DIALOGEX 0, 0, 371, 188
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Faults"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,297,7,67,14
+    PUSHBUTTON      "Clear Fault History",IDCANCEL,297,24,67,14
+    EDITTEXT        IDC_EDIT_FAULTS,7,7,288,174,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+IDD_DIALOG_STATUS DIALOGEX 0, 0, 201, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | DS_CENTERMOUSE | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "uDL1 Config Status"
+FONT 20, "Microsoft Sans Serif", 700, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT_STATUSTEXT,7,7,185,64,ES_CENTER | ES_MULTILINE | ES_READONLY | NOT WS_BORDER
+END
+
+IDD_DIALOG_BUSYSTATUS DIALOGEX 0, 0, 351, 79
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Progress"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Ok",IDOK,7,58,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,294,58,50,14,NOT WS_VISIBLE
+    CTEXT           "Busy Transferring Data.  Please Wait.",IDC_STATIC_CAPTION,7,7,337,32
+    CONTROL         "",IDC_PROGRESS_BUSYDLG,"msctls_progress32",WS_BORDER,7,43,337,14
+    PUSHBUTTON      "Abort",IDC_BUTTON_PROGRESSABORT,149,58,50,14,NOT WS_VISIBLE
+END
+
+IDD_DIALOG_CHART DIALOGEX 0, 0, 678, 354
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Data Chart"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ChartViewer,"Static",SS_BITMAP,92,4,15,13
+    CONTROL         "Pointer",IDC_PointerPB,"Button",BS_AUTORADIOBUTTON | BS_ICON | BS_CENTER | BS_PUSHLIKE | WS_GROUP,8,8,76,16
+    CONTROL         "Zoom In",IDC_ZoomInPB,"Button",BS_AUTORADIOBUTTON | BS_ICON | BS_CENTER | BS_PUSHLIKE,8,24,76,16
+    CONTROL         "Zoom Out",IDC_ZoomOutPB,"Button",BS_AUTORADIOBUTTON | BS_ICON | BS_CENTER | BS_PUSHLIKE,8,40,76,16
+    PUSHBUTTON      "Zoom All",IDC_BUTTON_ZOOMALL,7,57,76,14,BS_ICON
+    LTEXT           "Zoom Mode",IDC_STATIC_ZOOMMODE,8,97,72,12,SS_CENTERIMAGE
+    CONTROL         "X Zoom / Y Auto",IDC_XZoomPB,"Button",BS_AUTORADIOBUTTON | BS_ICON | BS_CENTER | BS_PUSHLIKE | WS_GROUP,8,110,76,16
+    CONTROL         "XY Zoom",IDC_XYZoomPB,"Button",BS_AUTORADIOBUTTON | BS_ICON | BS_CENTER | BS_PUSHLIKE,8,126,76,16
+    LTEXT           "Wave Print Segment",IDC_STATIC_WAVEPRINT,7,161,81,8
+    PUSHBUTTON      "Previous",IDC_BUTTON_PREVWAVE,7,172,76,14
+    PUSHBUTTON      "Next",IDC_BUTTON_NEXTWAVE,7,187,76,14
+    PUSHBUTTON      "First",IDC_BUTTON_FIRSTWAVE,7,202,76,14
+    PUSHBUTTON      "Last",IDC_BUTTON_LASTWAVE,7,217,76,14
+    PUSHBUTTON      "Print Chart",IDC_BUTTON_PRINT,7,319,76,14
+    PUSHBUTTON      "Save Chart",IDC_BUTTON_SAVECHART,7,335,76,14
+    LTEXT           "Duration (Days)",IDC_STATIC,583,23,68,12,SS_CENTERIMAGE | NOT WS_VISIBLE
+    CONTROL         "Start Date",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | SS_CENTERIMAGE | NOT WS_VISIBLE | WS_GROUP,583,7,68,11
+    CONTROL         "DateTimePicker1",IDC_StartDate,"SysDateTimePick32",DTS_RIGHTALIGN | NOT WS_VISIBLE | WS_TABSTOP,583,15,76,12
+    COMBOBOX        IDC_Duration,583,28,76,88,CBS_DROPDOWN | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    SCROLLBAR       IDC_HScrollBar,92,340,570,10
+    SCROLLBAR       IDC_VScrollBar,662,0,11,340,SBS_VERT
+    CONTROL         "Show Min/Max",IDC_CHECK_SHOWMINMAX,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,7,243,64,10
+    CONTROL         "Disable Decimation",IDC_CHECK_NODECIMATION,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,7,257,77,10
+END
+
+IDD_DIALOG_32KHZTEST DIALOGEX 0, 0, 235, 58
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "32kHz Test"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,178,23,50,14
+    CONTROL         "GPS Time Lock",IDC_CHECK_TIMELOCK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,61,10
+    EDITTEXT        IDC_EDIT_1PPSCOUNT,7,20,60,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "1PPS Count",IDC_STATIC,70,23,38,8
+    EDITTEXT        IDC_EDIT_MSCOUNT,7,37,60,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "TMR9 1ms Count",IDC_STATIC,70,40,55,8
+    CONTROL         "RTC Time Lock",IDC_CHECK_RTCLOCK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,75,7,62,10
+END
+
+IDD_DIALOG_SDLLOCATIONNOTES DIALOGEX 0, 0, 182, 87
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set SDL Location Notes"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Set Parameters",IDOK,7,67,62,14
+    PUSHBUTTON      "Cancel",IDCANCEL,125,67,50,14
+    LTEXT           "Station Series #",IDC_STATIC_SDLSTNSERIES,22,29,52,8
+    LTEXT           "Chainage (m)",IDC_STATIC_SDLCHAINAGE,30,47,44,8
+    EDITTEXT        IDC_EDIT_SDLSTNSERIES,79,26,80,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SDLCHAINAGE,79,44,80,14,ES_AUTOHSCROLL
+    CONTROL         "Enable SDL Location Notes",IDC_CHECK_SDLLOCATIONENNOTESABLE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,40,12,101,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1,8,1
+ PRODUCTVERSION 1,1,8,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Mobiltex Data Ltd."
+            VALUE "FileDescription", "uDL1 Configuration Application"
+            VALUE "FileVersion", "1.1.8.1"
+            VALUE "InternalName", "udl1config.exe"
+            VALUE "LegalCopyright", "(c)2011-2021 Mobiltex Data Ltd.  All rights reserved."
+            VALUE "OriginalFilename", "udl1config.exe"
+            VALUE "ProductName", "uDL1"
+            VALUE "ProductVersion", "1.1.8.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_uDL1CONFIG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 670
+        BOTTOMMARGIN, 336
+    END
+
+    IDD_DIALOG_INTERRUPTERSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_DIALOG_SHUNTCALC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 154
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_DIALOG_4T020MA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_DIALOG_RELAYSELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_DIALOG_FACTORYOVERRIDES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 46
+    END
+
+    IDD_DIALOG_FAULTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 364
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+    END
+
+    IDD_DIALOG_STATUS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+
+    IDD_DIALOG_BUSYSTATUS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 344
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_DIALOG_CHART, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 673
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 350
+    END
+
+    IDD_DIALOG_32KHZTEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 51
+    END
+
+    IDD_DIALOG_SDLLOCATIONNOTES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR_MAINMENU ACCELERATORS
+BEGIN
+    "^R",           ID_COMMUNICATIONS_READFROMuDL1, ASCII, NOINVERT
+    "^W",           ID_COMMUNICATIONS_WRITETOuDL1, ASCII, NOINVERT
+    "^O",           ID_FILE_OPEN32772,      ASCII,  NOINVERT
+    "^S",           ID_FILE_SAVEAS,         ASCII,  NOINVERT
+    VK_F1,          ID_HELP_CONFIGURATIONGUIDE, VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open",                       ID_FILE_OPEN32772
+        MENUITEM "&Save As",                    ID_FILE_SAVEAS
+        MENUITEM "&Defaults",                   ID_FILE_DEFAULTS
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&Communications"
+    BEGIN
+        MENUITEM "&Read From uDL1",             ID_COMMUNICATIONS_READFROMuDL1
+        MENUITEM "&Write To uDL1",              ID_COMMUNICATIONS_WRITETOuDL1
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Configuration Guide",        ID_HELP_CONFIGURATIONGUIDE
+        MENUITEM "Binary Memory Extraction Tool", ID_HELP_BINARYMEMORYEXTRACTIONTOOL
+        MENUITEM "Maximum Acquisition Time Estimate", ID_HELP_MAXIMUMACQUISITIONTIMEESTIMATE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\icon.ico"
+
+IDI_PointerPB           ICON                    "res\\pointerPB.ico"
+
+IDI_ZoomOutPB           ICON                    "res\\zoomOutPB.ico"
+
+IDI_ZoomInPB            ICON                    "res\\zoomInPB.ico"
+
+IDI_XZoomPB             ICON                    "res\\xzoomPB.ico"
+
+IDI_XYZoomPB            ICON                    "res\\xyzoomPB.ico"
+
+IDI_ZoomAllPB           ICON                    "res\\zoomAllPB.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_uDL1CONFIG_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG_SDLLOCATIONNOTES AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About udl1config..."
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Canada) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENC)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_CAN
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_SPLITDATAFILES DIALOGEX 0, 0, 468, 270
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Master Data File Split Utility"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "File Selections",IDC_STATIC,7,7,46,8
+    LISTBOX         IDC_LIST_FILELIST,7,17,345,118,LBS_SORT | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | LBS_NOSEL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    GROUPBOX        "Options",IDC_STATIC,7,137,345,126
+    CONTROL         "Separate Output Files For Each Session",IDC_CHECK_INCLUDETEMPREADINGS3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,150,159,10
+    CONTROL         "Include Notes In Each Output File",IDC_CHECK_INCLUDENOTES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,162,147,10
+    CONTROL         "Include Verbal Date/Time In Each Output File",IDC_CHECK_INCLUDEVERBALTIMEDATE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,174,170,10
+    CONTROL         "Include Excel Date/Time In Each Output File",IDC_CHECK_INCLUDEEXCELTIME,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,186,182,10
+    CONTROL         "Include Measurement Units In Each Output File",IDC_CHECK_INCLUDEUNITS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,198,182,10
+    CONTROL         "DC Readings Output File",IDC_CHECK_INCLUDEDCREADINGS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,210,105,10
+    CONTROL         "AC Readings Output File",IDC_CHECK_INCLUDEACREADINGS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,222,106,10
+    CONTROL         "Temperature Readings Output File",IDC_CHECK_INCLUDETEMPREADINGS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,234,137,10
+    CONTROL         "DC Wave Capture Readings Output File",IDC_CHECK_INCLUDETEMPREADINGS2,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,246,157,10
+    PUSHBUTTON      "Select Source Master File(s)",IDC_BUTTON_SELECTFILES,359,17,102,14
+    PUSHBUTTON      "Convert",IDC_BUTTON_CONVERTFILES,359,39,102,14
+    DEFPUSHBUTTON   "Exit",IDOK,359,249,102,14
+    PUSHBUTTON      "Cancel",IDCANCEL,451,225,10,7,NOT WS_VISIBLE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG_SPLITDATAFILES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 461
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 263
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (Canada) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\udl1config.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

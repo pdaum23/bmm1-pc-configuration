@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "udl1config", "rmu3config.vcproj", "{76787C8E-BE16-405E-B99D-E280AAF7C7F3}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "UDL1 Configuration Application", "..\udl1configsetup\RMU2configsetup.vdproj", "{0D89AF80-33BB-4F50-82D1-B68361D758E3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UDL1FIRM", "..\udl1firm\RDU1CONFIG\RDU1CONFIG.vcproj", "{0B1AA4EC-9D86-4C39-A570-06ADC8511517}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UDL1INSTALLER", "..\udl1installer\RMU2INSTALLER\RMU2INSTALLER.vcproj", "{B8E0F83A-9F14-4901-8851-09DC4C32DD8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76787C8E-BE16-405E-B99D-E280AAF7C7F3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{76787C8E-BE16-405E-B99D-E280AAF7C7F3}.Debug|Win32.Build.0 = Debug|Win32
+		{76787C8E-BE16-405E-B99D-E280AAF7C7F3}.Release|Win32.ActiveCfg = Release|Win32
+		{76787C8E-BE16-405E-B99D-E280AAF7C7F3}.Release|Win32.Build.0 = Release|Win32
+		{0D89AF80-33BB-4F50-82D1-B68361D758E3}.Debug|Win32.ActiveCfg = Debug
+		{0D89AF80-33BB-4F50-82D1-B68361D758E3}.Debug|Win32.Build.0 = Debug
+		{0D89AF80-33BB-4F50-82D1-B68361D758E3}.Release|Win32.ActiveCfg = Release
+		{0D89AF80-33BB-4F50-82D1-B68361D758E3}.Release|Win32.Build.0 = Release
+		{0B1AA4EC-9D86-4C39-A570-06ADC8511517}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0B1AA4EC-9D86-4C39-A570-06ADC8511517}.Debug|Win32.Build.0 = Debug|Win32
+		{0B1AA4EC-9D86-4C39-A570-06ADC8511517}.Release|Win32.ActiveCfg = Release|Win32
+		{0B1AA4EC-9D86-4C39-A570-06ADC8511517}.Release|Win32.Build.0 = Release|Win32
+		{B8E0F83A-9F14-4901-8851-09DC4C32DD8C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B8E0F83A-9F14-4901-8851-09DC4C32DD8C}.Debug|Win32.Build.0 = Debug|Win32
+		{B8E0F83A-9F14-4901-8851-09DC4C32DD8C}.Release|Win32.ActiveCfg = Release|Win32
+		{B8E0F83A-9F14-4901-8851-09DC4C32DD8C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

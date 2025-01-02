@@ -1,0 +1,95 @@
+; ================ Version section =================
+ 
+[Version]
+Signature = "$Windows NT$"
+Class = SerialRDU1Class
+ClassGuid = {3FC81F27-D1C4-474e-A8C3-885291AC1B37}
+Provider = %ProviderName%
+DriverVer = 08/20/2008, 6.0.1.0
+ 
+; ========== Manufacturer/Models sections =========== 
+
+[Manufacturer] 
+%ProviderName% = RDU1,NTx86,NTia64,NTamd64 
+
+[RDU1.NTx86] 
+%DeviceDesc% =USB_Install, USB\VID_1d72&PID_0007 
+
+[RDU1.NTamd64] 
+%DeviceDesc% =USB_Install, USB\VID_1d72&PID_0007
+
+
+ 
+; ================== Installation ==================
+
+[ClassInstall]
+AddReg=ClassAddReg
+
+[ClassInstall32]
+AddReg=ClassAddReg
+
+[ClassAddReg]
+HKR,,,,"%ClassName%"
+HKR,,Icon,,-28
+ 
+[USB_Install]
+Include = WinUSB.inf 
+Needs = WinUSB.NT 
+ 
+[USB_Install.Services]
+Include = WinUSB.inf
+AddService = WinUSB, 0x00000002, WinUSB_ServiceInstall
+ 
+[WinUSB_ServiceInstall]
+DisplayName   = %WinUSB_SvcDesc%
+ServiceType   = 1
+StartType     = 3
+ErrorControl  = 1
+ServiceBinary = %12%\WinUSB.sys
+ 
+[USB_Install.Wdf]
+KmdfService = WinUSB, WinUSB_Install
+ 
+[WinUSB_Install]
+KmdfLibraryVersion = 1.5
+ 
+[USB_Install.HW]
+AddReg = Dev_AddReg
+ 
+[Dev_AddReg]
+HKR,,DeviceInterfaceGUIDs,0x00010000,"{697BE4AB-A0A1-4834-B79E-AA652190A504}"
+  
+[USB_Install.CoInstallers]
+AddReg = CoInstallers_AddReg
+CopyFiles = CoInstallers_CopyFiles
+ 
+[CoInstallers_AddReg]
+HKR, , CoInstallers32, 0x00010000, "WinUSBCoInstaller.dll","WdfCoInstaller01005.dll, WdfCoInstaller"
+ 
+[CoInstallers_CopyFiles]
+WinUSBCoInstaller.dll
+WdfCoInstaller01005.dll
+
+[SourceDisksNames]
+1 = %MediaDescription%
+ 
+[SourceDisksFiles]
+WinUSBCoInstaller.dll = 1, x86
+WdfCoInstaller01005.dll = 1, x86
+ 
+[SourceDisksFiles.amd64]
+WinUSBCoInstaller.dll = 1, amd64
+WdfCoInstaller01005.dll = 1, amd64
+ 
+[DestinationDirs]
+CoInstallers_CopyFiles = 11
+
+ 
+; ==================== Strings =====================
+ 
+[Strings]
+ClassName="Mobiltex Cathodic Devices"
+ProviderName = "Mobiltex Data Ltd."
+DeviceDesc="RMU2/SDL1 Tester"
+MediaDescription  = "RMU2/SDL1 Tester CD"
+WinUSB_SvcDesc = "WinUSB Driver Service"

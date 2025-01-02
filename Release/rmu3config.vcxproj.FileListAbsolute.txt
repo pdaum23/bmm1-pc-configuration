@@ -1,0 +1,2 @@
+C:\work\udl1\udl1-pc-configuration\Release\udl1config.exe
+C:\work\mobiltexdataltd\BMM1\bmm1-pc-configuration\Release\udl1config.exe
